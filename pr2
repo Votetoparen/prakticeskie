@@ -1,0 +1,36 @@
+print("Задача 1: Расчет стоимости ингредиентов")
+count = int(input("Сколько ингредиентов вы хотите добавить? "))
+total_cost = 0
+for i in range(count):
+    quantity = float(input(f"Введите количество ингредиента {i+1}: "))
+    price = float(input(f"Введите цену ингредиента {i+1}: "))
+    total_cost += quantity * price
+print("\nЗадача 2: Определение времени приготовления блюда")
+steps = int(input("Сколько этапов в приготовлении блюда? "))
+total_time = 0
+for i in range(steps):
+    time = int(input(f"Введите время для этапа {i+1} (в минутах): "))
+    total_time += time
+print("\nЗадача 3: Составление рецепта")
+ingredients = ["Мука", "Яйца", "Молоко", "Сахар", "Ванилин"]
+print("Рецепт содержит следующие ингредиенты:")
+for item in ingredients:
+    print("-", item)
+print("\nЗадача 4: Подсчет калорийности блюда")
+calories = []
+for i in range(3):
+    cal = int(input(f"Введите калории для ингредиента {i+1}: "))
+    calories.append(cal)
+total_calories = sum(calories)
+print("Общая калорийность блюда:", total_calories, "ккал")
+print("\nЗадача 5: Проверка наличия ингредиентов")
+required = ["Мука", "Яйца", "Молоко"]
+available = ["Мука", "Молоко", "Сахар"]
+missing = []
+for item in required:
+    if item not in available:
+        missing.append(item)
+if len(missing) == 0:
+    print("Все необходимые ингредиенты есть.")
+else:
+    print("Не хватает следующих ингредиентов:", missing)
